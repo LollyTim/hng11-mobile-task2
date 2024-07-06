@@ -30,7 +30,7 @@ This application is a React Native project that fetches product data from the Ti
 
 2. Navigate to the project directory:
    
-       ```bash
+   ```bash
          cd hng11-mobile-task2
    
 4. Install dependencies:
@@ -40,38 +40,38 @@ This application is a React Native project that fetches product data from the Ti
 ## Usage
 1. Start the Expo development server:
 
-       ```bash
+   ```bash
          expo start
 2. Open the Expo app on your device and scan the QR code to view the application.
 
-## API Configuration
-          ```bash
-                  // store.ts
-               // ...
-               const useStore = create<State>((set) => ({
-                 // ...
-                 fetchProducts: async () => {
-                   try {
-                     const response = await axios.get(
-                       'https://api.timbu.cloud/products',
-                       {
-                         params: {
-                           organization_id: 'YOUR_ORGANIZATION_ID', // Replace with your organization ID
-                           reverse_sort: false,
-                           page: 1,
-                           size: 10,
-                           Appid: 'YOUR_APP_ID', // Replace with your App ID
-                           Apikey: 'YOUR_API_KEY', // Replace with your API key
-                         },
-                       }
-                     );
-                     // ...
-                   } catch (e: any) {
-                     // ...
-                   }
-                 },
-               }));
-               // ...
+      ## API Configuration
+    ```bash
+                                          // store.ts
+                                       // ...
+                                       const useStore = create<State>((set) => ({
+                                         // ...
+                                         fetchProducts: async () => {
+                                           try {
+                                             const response = await axios.get(
+                                               'https://api.timbu.cloud/products',
+                                               {
+                                                 params: {
+                                                   organization_id: 'YOUR_ORGANIZATION_ID', // Replace with your organization ID
+                                                   reverse_sort: false,
+                                                   page: 1,
+                                                   size: 10,
+                                                   Appid: 'YOUR_APP_ID', // Replace with your App ID
+                                                   Apikey: 'YOUR_API_KEY', // Replace with your API key
+                                                 },
+                                               }
+                                             );
+                                             // ...
+                                           } catch (e: any) {
+                                             // ...
+                                           }
+                                         },
+                                       }));
+                                       // ...
 
 
 ### Project Structure
